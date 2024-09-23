@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Cliente</title>
+</head>
+<body>
+    <h1>Formulario Cliente</h1>
+</body>
+    <form  th:object="${cliente}" method="post" th:action="${accion}">
+        <label>NOMBRE <input type="text" th:field="*{nombre}"/></label>
+        <br>
+        <label>EDAD <input type="number" th:field="*{edad}"/></label>
+        <br>
+        <label>CELULAR <input type="number" th:field="*{celular}"/></label>
+        <br>
+        <button type="submit" >GUARDAR</button>
+    </form>
+
+<a href="/clientes">Volver al listado personas</a>
+</html>
