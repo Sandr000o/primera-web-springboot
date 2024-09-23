@@ -11,6 +11,10 @@ xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity6">
 <body>
     <h1 class="text-center">LISTA CLIENTES</h1>
     <div class="container-fluid text-center " style="max-width:754px " >
+        <p th:inline="text">Bienvenido <span sec:authentication="name"></span></p>
+        <form th:action="@{/logout}" method="POST">
+            <input type="submit" value="Cerrar Sesión" class="btn btn-danger mb-2">
+        </form>
         <table class="table table-dark table-hover table-sm table-responsive">
             <thead class="table-dark">
                 <tr>

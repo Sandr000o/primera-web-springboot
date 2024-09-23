@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping("/listar")
+@Controller()
+@RequestMapping({"/listar","/"})
 public class ClienteController {
     @Autowired
     private ClienteService clienteService;
+
+
 
     @GetMapping
     public String listarClientes(Model model){
